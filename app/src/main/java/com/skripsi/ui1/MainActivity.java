@@ -27,7 +27,9 @@ public class MainActivity extends AppCompatActivity {
         textsplash = (LinearLayout) findViewById(R.id.textSplash);
         texthome = (LinearLayout) findViewById(R.id.textHome);
         menus = (LinearLayout) findViewById(R.id.menus);
+
         ImageView intentCoin = (ImageView) findViewById(R.id.intentCoin);
+        ImageView intentParse = (ImageView) findViewById(R.id.intentParse);
 
         //animasi background
         bgapp.animate().translationY(-1800).setDuration(1000).setStartDelay(600);
@@ -43,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,Coin.class);
+                startActivity(intent);
+            }
+        });
+
+        intentParse.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,daily_chinese.class);
                 startActivity(intent);
             }
         });
